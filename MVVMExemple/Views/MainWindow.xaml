@@ -49,7 +49,7 @@
             <DockPanel DockPanel.Dock="Top">
                 <StackPanel Grid.Column="1">
                     <Label Width="auto" Height="52" Content="Division" HorizontalAlignment="Center" FontSize="25" FontWeight="DemiBold" />
-                    <TextBox x:Name="tbText" Width="auto" Height="auto" FontSize="25" FontWeight="Bold" IsReadOnly="True" Text="{Binding Dev, Mode=OneWay}" />
+                    <TextBox x:Name="tbText" Width="auto" Height="auto" FontSize="25" FontWeight="Bold" IsReadOnly="True" Text="{Binding Dev, Mode=OneWay}" TextWrapping="Wrap" />
                 </StackPanel>
             </DockPanel>
         </DockPanel>

@@ -39,6 +39,12 @@ namespace MVVMExemple.ViewModel
                 NewMethod();
             }
         }
+        private string _infoText;
+        public string InfoText
+        {
+            get { return _infoText; }
+            set { _infoText = value; NewMethod(); }
+        }
         
         public int Sum => MathFuncs.GetSumOf(Number1, Number2);
 
@@ -46,7 +52,7 @@ namespace MVVMExemple.ViewModel
 
         public int Mull => MathFuncs.GetMullOf(Number1, Number2);
 
-        public double Dev => MathFuncs.GetDevOf(Number1, Number2);
+        public object Dev => MathFuncs.GetDevOf(Number1, Number2, InfoText);
         
     }
 }
