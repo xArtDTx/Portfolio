@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,8 +30,9 @@ namespace EfHwApp
         }
         
 
-        private void AddButton_OnClick(object sender, RoutedEventArgs e)
+        private void AddButton1_OnClick(object sender, RoutedEventArgs e)
         {
+            
             var financialAccounting = new FinancialAccounting
             {
                 Profit = Int32.Parse(ProfitTxt1.Text) + Int32.Parse(ProfitTxt2.Text) + Int32.Parse(ProfitTxt3.Text),

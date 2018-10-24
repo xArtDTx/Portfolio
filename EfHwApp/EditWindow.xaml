@@ -18,26 +18,35 @@
         <StackPanel Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center">
             <Label Content="Доходы" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"></Label>
             <Label Content="N1" HorizontalAlignment="Center" FontWeight="Bold"></Label>
-            <TextBox Name="ProfitTxt1" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Profit1, UpdateSourceTrigger=PropertyChanged}"/>
+            <TextBox Name="ProfitTxt1" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Profit1, UpdateSourceTrigger=PropertyChanged, 
+                NotifyOnSourceUpdated=True,Mode=OneWay, FallbackValue=0, TargetNullValue=0}"/>
             <Label Content="N2" HorizontalAlignment="Center" FontWeight="Bold" ></Label>
-            <TextBox Name="ProfitTxt2" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Profit2, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Name="ProfitTxt2" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Profit2, UpdateSourceTrigger=PropertyChanged,
+                NotifyOnSourceUpdated=True,Mode=OneWay, FallbackValue=0, TargetNullValue=0}"/>
             <Label Content="N3" HorizontalAlignment="Center" FontWeight="Bold"></Label>
-            <TextBox Name="ProfitTxt3" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Profit3, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Name="ProfitTxt3" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Profit3, UpdateSourceTrigger=PropertyChanged,
+                NotifyOnSourceUpdated=True,Mode=OneWay, FallbackValue=0, TargetNullValue=0}"/>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="0" HorizontalAlignment="Center">
             <Label Content="Расходы" HorizontalAlignment="Center" FontSize="25" FontWeight="Bold"></Label>
             <Label Content="N1" HorizontalAlignment="Center" FontWeight="Bold"></Label>
-            <TextBox Name="Costs1" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Costs1, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Name="Costs1" Height="30" BorderBrush="Black" Margin="3" 
+                     Text="{Binding Costs1, UpdateSourceTrigger=PropertyChanged, 
+                NotifyOnSourceUpdated=True,Mode=OneWay, FallbackValue=0, TargetNullValue=0}"/>
             <Label Content="N2" HorizontalAlignment="Center" FontWeight="Bold" ></Label>
-            <TextBox Name="Costs2" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Costs2, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Name="Costs2" Height="30" BorderBrush="Black" Margin="3" 
+                     Text="{Binding Costs2, UpdateSourceTrigger=PropertyChanged,
+                NotifyOnSourceUpdated=True, Mode=OneWay, FallbackValue=0, TargetNullValue=0}"/>
             <Label Content="N3" HorizontalAlignment="Center" FontWeight="Bold"></Label>
-            <TextBox Name="Costs3" Height="30" BorderBrush="Black" Margin="3" Text="{Binding Costs3, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            <TextBox Name="Costs3" Height="30" BorderBrush="Black" Margin="3" 
+                     Text="{Binding Costs3, UpdateSourceTrigger=PropertyChanged, 
+                NotifyOnSourceUpdated=True, Mode=OneWay, FallbackValue=0, TargetNullValue=0}"/>
         </StackPanel>
         <DockPanel Grid.Row="1" Grid.Column="0" Height="auto" Width="auto">
-            <Button Name="AddButton" HorizontalAlignment="Center" Content="Save" Width="100" Click="AddButton_OnClick" Margin="5"></Button>
+            <Button Name="AddButton1" HorizontalAlignment="Center" Content="Сохранить" Width="100" Click="AddButton1_OnClick" Margin="5"></Button>
         </DockPanel>
         <DockPanel Grid.Row="1" Grid.Column="1">
-            <Button Name="CancelButton" HorizontalAlignment="Center" Content="Cancel" Width="100" Click="CancelButton_OnClick" Margin="5"></Button>
+            <Button Name="CancelButton" HorizontalAlignment="Center" Content="Отменить" Width="100" Click="CancelButton_OnClick" Margin="5"></Button>
         </DockPanel>
     </Grid>
 </Window>

@@ -34,8 +34,7 @@ namespace EfHwApp
 
         private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
         {
-            _financialAccounting.FinancialAccountingSet.Load();
-            _financialAccounting.FinancialAccountingSet.Local.ToBindingList();
+            Update();
         }
 
         private void AddButton_OnClick(object sender, RoutedEventArgs e)
@@ -67,29 +66,20 @@ namespace EfHwApp
         {
             EditWindow editWindow = new EditWindow();
             editWindow.ShowDialog();
+            _financialAccounting.SaveChanges();
+            Update();
         }
 
 
         private void UpdateButton_OnClick(object sender, RoutedEventArgs e)
         {
-            var financialAccounting = new FinancialAccounting();
-            financialAccounting = _financialAccounting.FinancialAccountingSet.Find(1);
-            DataContext = new DataBaseContainer();
-            bool saveFailed;
-            do
-            {
-                saveFailed = false;
-                try
-                {
-                    _financialAccounting.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException ex)
-                {
-                    saveFailed = true;
-                    var entry = ex.Entries.Single();
-                    entry.OriginalValues.SetValues(entry.GetDatabaseValues());
-                }
-            } while (saveFailed);
+            Update();
+        }
+
+        public void Update()
+        {
+            _financialAccounting.FinancialAccountingSet.Load();
+            _financialAccounting.FinancialAccountingSet.Local.ToBindingList();
         }
     }
 }
