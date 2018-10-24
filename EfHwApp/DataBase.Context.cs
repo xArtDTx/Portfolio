@@ -15,6 +15,7 @@ namespace EfHwApp
     
     public partial class DataBaseContainer : DbContext
     {
+        
         public DataBaseContainer()
             : base("name=DataBaseContainer")
         {

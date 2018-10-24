@@ -7,9 +7,9 @@
         mc:Ignorable="d"
         Loaded="MainWindow_OnLoaded"
         Title="MainWindow" Height="450" Width="800">
-    <TabControl>
-        <TabItem Header="Учет">
-            <Grid>
+    <TabControl VerticalAlignment="Top">
+        <TabItem Header="Учет" VerticalAlignment="Top">
+            <Grid VerticalAlignment="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition />
@@ -21,17 +21,17 @@
                         <ColumnDefinition  Width="Auto"  ></ColumnDefinition>
                         <ColumnDefinition/>
                         <ColumnDefinition Width="Auto"></ColumnDefinition>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition Width="0.1*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
                     <Label Content="Доходы" Grid.Column="0"></Label>
                     <TextBox Name="ProfitTxt" Grid.Column="1" VerticalAlignment="Center" Text="{Binding Profit, UpdateSourceTrigger=PropertyChanged}" />
                     <Label Content="Расходы" Grid.Column="2"></Label>
                     <TextBox Grid.Column="3" Name="CostsTxt" VerticalAlignment="Center"  Text="{Binding Costs, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Button Content="+" Grid.Column="5" Name="StartButton" Click="StartButton_OnClick"></Button>
-                    <Button Content="Добавить" Grid.Column="6" Margin="5 0 5 0" Name="AddButton" Click="AddButton_OnClick"></Button>
+                    <Button Content="Добавить+" Grid.Column="5" Margin="5 0 5 0" Name="StartButton" Click="AddButton_OnClick"></Button>
+                    <Button Content="Добавить+++" Grid.Column="6" Margin="5 0 5 0" Name="AddButton" Click="AddEnhButton_OnClick"></Button>
                     <Button Content="Удалить" Grid.Column="7" Margin="5 0 5 0" Name="DelButton" Click="DelButton_OnClick"></Button>
                     <Button  Name="UpdateButton" Grid.Column="8" Click="UpdateButton_OnClick">
                         <Image Source="Image/Power_-_Restart.png"></Image>

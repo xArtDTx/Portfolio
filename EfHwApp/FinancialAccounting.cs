@@ -20,9 +20,7 @@ namespace EfHwApp
         public int FinancialAccountingId { get; set; }
         public int Profit { get; set; }
         public int Costs { get; set; }
-        public string Name { get; set; }
-
-       
+        public  string Name { get; set; }
     }
 
    
